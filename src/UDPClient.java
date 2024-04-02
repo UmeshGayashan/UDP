@@ -8,7 +8,7 @@ public class UDPClient {
         //Special Socket for UDP ==> DatagramSocket
         DatagramSocket ds = new DatagramSocket();
         int i = 8;
-        byte[] b = (i+"").getBytes();
+        byte[] b = String.valueOf(i).getBytes();
         InetAddress ia = InetAddress.getLocalHost();
         DatagramPacket dp = new DatagramPacket(b,b.length,ia,9999);
         ds.send(dp);
